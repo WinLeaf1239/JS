@@ -67,7 +67,7 @@
 //<-----------------------------------------------------------------Работка??----------------------------------------------------------------------------------------->>
 
 
-console.log("Привет-Медвед Молодежь!");
+// console.log("Привет-Медвед Молодежь!");
 
 // let result = prompt();
 
@@ -77,7 +77,7 @@ console.log("Привет-Медвед Молодежь!");
 //     console.log("Число положительное")
 // }
 
-let len = "Хаю Хай";
+// let len = "Хаю Хай";
 // console.log(len.length); // 7 - длина
 
 // let newText = len.length
@@ -261,3 +261,50 @@ let len = "Хаю Хай";
 // }
 
 // gewVek();
+
+
+let fruits = ['яблоко', 'клубника', 'яблоко'];
+
+let uniqueFruits = fruits.filter((fruit, index) => {
+    return fruits.indexOf(fruit) === index; //проверякм первое вхождение, типо так у яблоко индекс 0, fruits.indexOf(fruit) === index; 0 == 0(true) , далее так же клубника 1 ==1, а после яблоко уже 0 == 2, фалсе, т.к индекс оф смотрит первое включение
+});
+// Метод fruits.indexOf(fruit) ищет элемент в массиве и возвращает его индекс
+console.log(uniqueFruits);
+
+
+let fruitiki = ['яблоко', 'клубника', 'яблоко'];
+let uniki = []; 
+
+for (let i = 0; i < fruitiki.length; i++) {
+    if (!uniki.includes(fruitiki[i])) { //Если не включено - включаем//
+        uniki.push(fruitiki[i]);
+    }
+}
+
+console.log(uniqueFruits);
+
+
+
+let six = [1,2,3,4,5,6,7,-1,-2]
+a = 0
+for(let i = 0; i<six.length; i++){
+    if (six[i] < 0){
+        a +=1
+    }
+}
+if (a > 0){
+    console.log('False')
+}
+else{
+    console.log('True')
+}
+
+
+let seven = [1,2,3,4,5,6,7,-1,-2]
+
+let prov = seven.filter(num => num > 0) //if num>0 ретурн
+
+let newgen = prov.length == seven.length;
+
+console.log(newgen)
+

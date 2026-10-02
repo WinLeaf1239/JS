@@ -263,48 +263,181 @@
 // gewVek();
 
 
-let fruits = ['яблоко', 'клубника', 'яблоко'];
+// let fruits = ['яблоко', 'клубника', 'яблоко'];
 
-let uniqueFruits = fruits.filter((fruit, index) => {
-    return fruits.indexOf(fruit) === index; //проверякм первое вхождение, типо так у яблоко индекс 0, fruits.indexOf(fruit) === index; 0 == 0(true) , далее так же клубника 1 ==1, а после яблоко уже 0 == 2, фалсе, т.к индекс оф смотрит первое включение
-});
-// Метод fruits.indexOf(fruit) ищет элемент в массиве и возвращает его индекс
-console.log(uniqueFruits);
+// let uniqueFruits = fruits.filter((fruit, index) => {
+//     return fruits.indexOf(fruit) === index; //проверякм первое вхождение, типо так у яблоко индекс 0, fruits.indexOf(fruit) === index; 0 == 0(true) , далее так же клубника 1 ==1, а после яблоко уже 0 == 2, фалсе, т.к индекс оф смотрит первое включение
+// });
+// // Метод fruits.indexOf(fruit) ищет элемент в массиве и возвращает его индекс
+// console.log(uniqueFruits);
 
 
-let fruitiki = ['яблоко', 'клубника', 'яблоко'];
-let uniki = []; 
+// let fruitiki = ['яблоко', 'клубника', 'яблоко'];
+// let uniki = []; 
 
-for (let i = 0; i < fruitiki.length; i++) {
-    if (!uniki.includes(fruitiki[i])) { //Если не включено - включаем//
-        uniki.push(fruitiki[i]);
-    }
+// for (let i = 0; i < fruitiki.length; i++) {
+//     if (!uniki.includes(fruitiki[i])) { //Если не включено - включаем//
+//         uniki.push(fruitiki[i]);
+//     }
+// }
+
+// console.log(uniqueFruits);
+
+
+
+// let six = [1,2,3,4,5,6,7,-1,-2]
+// a = 0
+// for(let i = 0; i<six.length; i++){
+//     if (six[i] < 0){
+//         a +=1
+//     }
+// }
+// if (a > 0){
+//     console.log('False')
+// }
+// else{
+//     console.log('True')
+// }
+
+
+// let seven = [1,2,3,4,5,6,7,-1,-2]
+
+// let prov = seven.filter(num => num > 0) //if num>0 ретурн
+
+// let newgen = prov.length == seven.length;
+
+// console.log(newgen)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+// let heading = document.getElementsByTagName('h1');
+// let secondHeading = document.getElementById('heading')
+
+// let text = secondHeading.innerText;
+
+
+
+
+// let upperText = text.toUpperCase();
+ 
+
+// function changeText(){
+//     secondHeading.innerText = 'goodbye'
+// }
+
+// button.addEventListener('click', changeText); //меняет хелло на гудбай, функцию передаем без скобочек ибо не вызываем
+
+// console.log(button)
+
+// console.log(text)
+
+// console.log(upperText)
+
+// button.style.background = 'blue';
+
+// function changeMove(){
+//     let x = Math.floor(Math.random()*600)
+//     let y = Math.floor(Math.random()*600)
+
+//     button.style.position = 'absolute';
+
+//     button.style.left = x + 'px';
+//     button.style.top = y + 'px';
+// }
+
+// button.addEventListener('mouseover' , changeMove);
+
+// console.log(heading)
+// console.log(secondHeading)
+
+// paragraph.textContent = paragraph.textContent.replace(/\s/g, '');
+
+
+
+
+// function newpar(){        DONT WORK
+//     let paragraph = document.querySelector('p');        DONT WORK
+//     paragraph.textContent = paragraph.textContent.replace(/@[^\s]*/g, '');         DONT WORK
+// }        DONT WORK
+        // DONT WORK
+// newpar()        DONT WORK
+
+
+
+
+// let parik = document.querySelector('p');
+
+// let word = 'привет_максим_Настафочи_пришеееельцу'
+// let warning = '_'
+
+// function replacer(){
+//     let new_word = word.split(warning)
+//     for(i = 1; i < new_word.length ; ++i)
+//         if(new_word.length > 0){
+//             new_word[i] = new_word[i][0].toUpperCase() + new_word[i].slice(1)
+//         }
+//     console.log(new_word.join(''))
+// }
+
+// replacer()
+
+let button = document.getElementById('button');
+
+let nowText = document.getElementsByTagName('h1')[0]; 
+
+function doubletext() {
+    let currentText = nowText.innerText; 
+    
+    nowText.innerText = currentText + " " + currentText; 
 }
 
-console.log(uniqueFruits);
-
-
-
-let six = [1,2,3,4,5,6,7,-1,-2]
-a = 0
-for(let i = 0; i<six.length; i++){
-    if (six[i] < 0){
-        a +=1
-    }
-}
-if (a > 0){
-    console.log('False')
-}
-else{
-    console.log('True')
-}
-
-
-let seven = [1,2,3,4,5,6,7,-1,-2]
-
-let prov = seven.filter(num => num > 0) //if num>0 ретурн
-
-let newgen = prov.length == seven.length;
-
-console.log(newgen)
-
+button.addEventListener('click', doubletext);
